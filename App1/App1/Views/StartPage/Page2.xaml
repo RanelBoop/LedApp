@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.Page2"
+             Style="{StaticResource PageBackgroundStyle}">
+             
+             
+             
+        <StackLayout >
+            
+            <Label Text="Connect to Device and Have Fun!"
+                   TextColor="White"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        <Frame Style="{StaticResource FrameStyle}">
+            <Label x:Name="Status"
+               Text="Status: not connected"
+               FontSize="Medium"
+               TextColor="Red"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"/>
+            </Frame>
+        <Picker x:Name="picker"
+            Title="Select a device"
+            TitleColor="Red"
+              SelectedIndexChanged="DeviceSelect_SelectedIndexChanged">
+        </Picker>
+   
+
+        <Button Text="Pair Device" 
+               TextColor="#0b5fe6"
+                BackgroundColor="Transparent"
+           HorizontalOptions="Center"
+            Clicked="OnPairButtonClicked"
+            VerticalOptions="CenterAndExpand" Margin="20"
+            />
+
+        <Button x:Name="GetStartedBtn" Text="Get Started!"
+                    Clicked="OnGetStartedBtnClicked"
+                    Style="{StaticResource PrimaryButtonStyle}"
+
+            />
+        </StackLayout>
+
+</ContentPage>

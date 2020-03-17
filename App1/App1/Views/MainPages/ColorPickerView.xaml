@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView     x:Class="App1.Views.MainPages.ColorPickerView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:App1.Converters"
+     BindingContext="{Binding Title}"> 
+    
+
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <converters:StringToColorConverter x:Key="StringToColorConverter" />
+        </ResourceDictionary>
+    </ContentView.Resources>
+
+    <ContentView.Content>
+        
+        <StackLayout Margin="20,35,20,25" >
+
+          <!--      <Label Text="Brightness" 
+                 BackgroundColor="Yellow" />
+                <Label x:Name="rotatingLabel"
+                 Text="Brightness"
+                 FontSize="Large" 
+                 HorizontalOptions="Center"
+                 VerticalOptions="CenterAndExpand"/>
+                <Slider Maximum="100"
+                    Value="50"
+                    ValueChanged="OnSliderValueChanged"/>
+                <Label x:Name="displayLabel"
+                   Text="(uninitialized)"
+                   VerticalOptions="CenterAndExpand"/>
+
+            -->
+
+
+            <!--  SELECTED COLOR  -->
+            <Frame
+                BackgroundColor="{Binding CategoryBackgroundColor, Converter={StaticResource StringToColorConverter}}"
+                CornerRadius="25"
+                HeightRequest="10"
+                WidthRequest="10"
+                HorizontalOptions="CenterAndExpand"/>
+
+            <!--  BUTTON PICKER  -->
+                <ImageButton HeightRequest="50" WidthRequest="50"
+                HorizontalOptions="CenterAndExpand"
+                Margin="0,10"
+                Source="colorwheel"
+                Pressed="ShowColorsPopup"/>
+            <!--Style="{StaticResource PrimaryButtonStyle}"-->
+            <!-- Text="Select Color"-->
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="Scale" Value="1" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="Scale" Value="0.7" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

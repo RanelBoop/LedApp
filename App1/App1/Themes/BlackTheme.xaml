@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="App1.Themes.BlackTheme">
+    <!-- xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" 
+                         -->
+
+                <!--Purple-->
+    <Color  x:Key="PrimaryColor">#7b6be8</Color>
+
+    <!--DarkPurpule-->
+    <Color x:Key="PrimaryDarkColor">#6c42f5</Color>
+    <!--LightBlack-->
+    <Color x:Key="PageBackgroundColor">#56000000</Color>
+    <!--DarkGray-->
+    <!--<Color x:Key="SecondaryPageBackgroundColor">#3f3f3f</Color>-->
+    <Color x:Key="SecondaryPageBackgroundColor">#ffffff</Color>
+    
+
+    <!--DarkGray-->
+    <Color x:Key="PrimaryTextColor">#3f3f3f</Color>
+    <!--MidGray-->
+    <Color x:Key="SecondaryTextColor">#6e6e6e</Color>
+    
+    <!--DarkGray-->
+    <Color x:Key="SecondaryTintColor">#3f3f3f</Color>
+
+    <!--White-->
+    <Color x:Key="PrimaryTintColor">#FFFFFF</Color>
+    <!--Black-->
+    <Color x:Key="TransparentBackground">#56000000</Color>
+    <!--TransparentPurple-->
+    <Color x:Key="TransparentBackgroundPurple">#567b6be8</Color>
+</ResourceDictionary>
