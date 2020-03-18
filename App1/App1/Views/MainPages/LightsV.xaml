@@ -17,6 +17,7 @@
                  TextColor="White"/>
                 <Slider Maximum="225"
                     Value="50"
+                    
                     ValueChanged="OnSliderValueChanged"/>
                 <Label x:Name="displayLabel"
                    Text="(uninitialized)"

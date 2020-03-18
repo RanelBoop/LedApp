@@ -13,8 +13,8 @@
     </ContentView.Resources>
 
     <ContentView.Content>
-        
-        <StackLayout Margin="20,35,20,25" >
+
+        <StackLayout Margin= "20,15,20,25" >
 
           <!--      <Label Text="Brightness" 
                  BackgroundColor="Yellow" />
@@ -42,14 +42,15 @@
                 HorizontalOptions="CenterAndExpand"/>
 
             <!--  BUTTON PICKER  -->
-                <ImageButton HeightRequest="50" WidthRequest="50"
+                <ImageButton HeightRequest="100" WidthRequest="100"
                 HorizontalOptions="CenterAndExpand"
                 Margin="0,10"
                 Source="colorwheel"
+                BackgroundColor="Transparent"
                 Pressed="ShowColorsPopup"/>
             <!--Style="{StaticResource PrimaryButtonStyle}"-->
             <!-- Text="Select Color"-->
-            <VisualStateManager.VisualStateGroups>
+           <!-- <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup x:Name="CommonStates">
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
@@ -58,11 +59,11 @@
                     </VisualState>
                     <VisualState x:Name="Pressed">
                         <VisualState.Setters>
-                            <Setter Property="Scale" Value="0.7" />
+                            <Setter Property="Scale" Value="0.9" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>
+                </VisualStateManager.VisualStateGroups> -->
         </StackLayout>
     </ContentView.Content>
 </ContentView>

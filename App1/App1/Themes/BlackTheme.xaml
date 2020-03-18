@@ -12,8 +12,12 @@
 
     <!--DarkPurpule-->
     <Color x:Key="PrimaryDarkColor">#6c42f5</Color>
-    <!--LightBlack-->
-    <Color x:Key="PageBackgroundColor">#56000000</Color>
+    
+    <!--LightBlack // MAIN background color!!! -->
+    <!--<Color x:Key="PageBackgroundColor">#56000000</Color> -->
+    <!--DarkPurple-->
+    <Color x:Key="PageBackgroundColor">#5A03B7</Color>
+    
     <!--DarkGray-->
     <!--<Color x:Key="SecondaryPageBackgroundColor">#3f3f3f</Color>-->
     <Color x:Key="SecondaryPageBackgroundColor">#ffffff</Color>
@@ -21,6 +25,7 @@
 
     <!--DarkGray-->
     <Color x:Key="PrimaryTextColor">#3f3f3f</Color>
+    
     <!--MidGray-->
     <Color x:Key="SecondaryTextColor">#6e6e6e</Color>
     
@@ -29,8 +34,10 @@
 
     <!--White-->
     <Color x:Key="PrimaryTintColor">#FFFFFF</Color>
+    
     <!--Black-->
     <Color x:Key="TransparentBackground">#56000000</Color>
+    
     <!--TransparentPurple-->
     <Color x:Key="TransparentBackgroundPurple">#567b6be8</Color>
 </ResourceDictionary>

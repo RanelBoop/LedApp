@@ -17,7 +17,8 @@
         <action android:name="android.bluetooth.device.action.ACTION_FOUND" />
       </intent-filter>
     </receiver>
-    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="App1" android:theme="@style/MainTheme" android:name="crc64ad68f59cd763e462.MainActivity">
+    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="App1" android:theme="@style/MainTheme" android:name="crc64ad68f59cd763e462.MainActivity" />
+    <activity android:noHistory="true" android:theme="@style/MyTheme.Splash" android:name="crc64ad68f59cd763e462.SplashActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />

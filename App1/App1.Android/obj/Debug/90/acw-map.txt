@@ -1,6 +1,9 @@
 App1.Droid.MainActivity, App1.Android;crc64ad68f59cd763e462.MainActivity
 App1.Droid.MainActivity;crc64ad68f59cd763e462.MainActivity
 app1.droid.MainActivity;crc64ad68f59cd763e462.MainActivity
+App1.Droid.SplashActivity, App1.Android;crc64ad68f59cd763e462.SplashActivity
+App1.Droid.SplashActivity;crc64ad68f59cd763e462.SplashActivity
+app1.droid.SplashActivity;crc64ad68f59cd763e462.SplashActivity
 App1.Droid.Bluetooth.BluetoothReceiver, App1.Android;com.companyname.app1.Bluetooth.BluetoothReceiver
 App1.Droid.Bluetooth.BluetoothReceiver;com.companyname.app1.Bluetooth.BluetoothReceiver
 com.companyname.app1.Bluetooth.BluetoothReceiver;com.companyname.app1.Bluetooth.BluetoothReceiver
