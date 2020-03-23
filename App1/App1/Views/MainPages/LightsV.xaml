@@ -15,8 +15,8 @@
                  HorizontalOptions="Center"
                  VerticalOptions="CenterAndExpand"
                  TextColor="White"/>
-                <Slider Maximum="225"
-                    Value="50"
+                <Slider Maximum="255"
+                    Value="0"
                     
                     ValueChanged="OnSliderValueChanged"/>
                 <Label x:Name="displayLabel"

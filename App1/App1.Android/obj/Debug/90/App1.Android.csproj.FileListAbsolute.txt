@@ -1009,3 +1009,5 @@ C:\Users\USER\Desktop\arduino_BT_LEDS\App1\App1.Android\obj\Debug\90\stamp\_Conv
 C:\Users\USER\Desktop\arduino_BT_LEDS\App1\App1.Android\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 C:\Users\USER\Desktop\arduino_BT_LEDS\App1\App1.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\USER\Desktop\arduino_BT_LEDS\App1\App1.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\USER\Desktop\arduino_BT_LEDS\App1\App1.Android\obj\Debug\90\res\drawable\breathing.png
+C:\Users\USER\Desktop\arduino_BT_LEDS\App1\App1.Android\obj\Debug\90\res\drawable\spectrum_cycling.png

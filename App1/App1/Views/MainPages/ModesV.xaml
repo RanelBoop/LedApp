@@ -10,21 +10,30 @@
             
 
             <StackLayout Margin="50">
-                <Label x:Name="FanLabel"
-                 Text="Fan Speed"
+                
+                <Label x:Name="ModeLabel"
+                 Text="Mode Switch"
                  FontSize="Large" 
+                 FontAttributes="Bold"
                  HorizontalOptions="Center"
                  VerticalOptions="CenterAndExpand"
                  TextColor="White"/>
-            <Image Source="pic" HeightRequest="80" WidthRequest=" 80" />
+            <Image Source="spectrum_cycling" HeightRequest="150" WidthRequest=" 150" Opacity="1" x:Name="spectrumImage"/>
+            <Image Source="breathing" HeightRequest="150" WidthRequest=" 150" Opacity="0" x:Name="breathingImage"/>
             <Frame Style="{StaticResource FrameStylePurple}" Margin="0,40">
-                <Slider Maximum="100"
+                <Switch IsToggled="True"
+                        Toggled="OnToggled"
+                        OnColor="FloralWhite"
+                        ThumbColor="Orange"
+                        Scale="1.3"
+                        HorizontalOptions="CenterAndExpand"/>
+                <!--<Slider Maximum="100"
                     Value="50"
                     ValueChanged="OnSliderValueChanged"
-                    Margin="10"/>
+                    Margin="10"/>-->
             </Frame>
-            <Label x:Name="displayLabel"
-                   Text="(uninitialized)"
+            <Label x:Name="ModeValue"
+                   Text="Spectrum Cycling"
                    VerticalOptions="CenterAndExpand"/>
 
         </StackLayout>
