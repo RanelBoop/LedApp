@@ -1,54 +1,24 @@
-int RED_LED =5;
-int BLUE_LED =3;
-int GREEN_LED =6;
 /*
-#define BLUE[3]={0,0,255};
-#define PINK[3]={255,0,255};//{255,192,203}
-#define RED[3]={255,0,0};
-#define YELLOW[3]={255,255,0};
-#define GREEN[3]={0,255,0};//128
-#define CYAN[3]={0,255,255};
-#define ORANGE[3]={255,111,0};
-#define MALACHITE[3]={11, 218, 81};
-#define BRIGHT_PINK[3]={250,0,100};
-#define PURPLE[3]={99, 57, 116};*/
+  LedApp.h - Library for controlling LED strips.
+  Created by Ranel Dolgitser, April 1, 2020.
+  Released into the public domain.
+*/
 
-const int BLUE[3] ={0,0,255};
-const int PINK[3] ={255,0,255};
-const int RED[3]= {255,0,0};
-const int YELLOW[3] ={255,255,0};
-const int GREEN[3] ={0,255,0};
-const int CYAN[3]= {0,255,255};
-const int ORANGE[3]= {255,111,0};
-const int MALACHITE[3] ={11, 218, 81};
-const int BRIGHT_PINK [3]={250,0,100};
-const int PURPLE[3]={99, 57, 116};
+#include "Arduino.h"
+#include "Morse.h"
 
-
-
-
-
-int brightness = 255;
-
-int gBright = 0;
-int rBright = 0;
-int bBright = 0;
-
-bool spectrumCycle=false;//if false,then its breathing mode
-
-int fadeTime = 10;
-int stayTime=20;
-int offTime=5;
-
-void setup() {
+LedApp::LedApp(int RED_LED,int BLUE_LED,int GREEN_LED)
+{
    pinMode(GREEN_LED, OUTPUT);
    pinMode(RED_LED, OUTPUT);
    pinMode(BLUE_LED, OUTPUT);
-
-
+   _GREEN_LED=GREEN_LED;
+   _RED_LED=RED_LED;
+   _BLUE_LED=BLUE_LED;
+  
 }
 
-void TurnOffAll2() {
+void LedApp::TurnOffAll2() {
   
    while(gBright+rBright+bBright>0) {
        analogWrite(RED_LED, rBright);
@@ -64,8 +34,8 @@ void TurnOffAll2() {
    delay(offTime);
 }
 
-void TurnOnColor(int RGB[3]){ 
-  
+void LedApp::TurnOnColor(int RGB[3]){
+
   //Fading into the selected color
   for(int i=0;i<RGB[0]+RGB[1]+RGB[2];i++){
 
@@ -80,19 +50,17 @@ void TurnOnColor(int RGB[3]){
       if(bBright<RGB[2])bBright++;
       delay(10);
 
-    
     delay(fadeTime);
     }
+    
   //After color achieved,stay on color 
-
     analogWrite(RED_LED,RGB[0]);
     analogWrite(GREEN_LED,RGB[1]);
     analogWrite(BLUE_LED, RGB[2]);
     delay(stayTime);
-    
 }
 
-void ChangeToColor(int RGB[3])
+void LedApp::ChangeToColor(int RGB[3])
 {
   while(gBright+rBright+bBright!=RGB[0]+RGB[1]+RGB[2]){
     analogWrite(RED_LED,rBright);
@@ -115,7 +83,7 @@ void ChangeToColor(int RGB[3])
  }
 
   
-void SpectrumCycling()
+void LedApp::SpectrumCycling()
   {
 
     while(spectrumCycle)
@@ -132,12 +100,8 @@ void SpectrumCycling()
          
       }
   }
-void Breathing()
+void LedApp::Breathing()
   {
-    //int COLORS[]={RED,BLUE,YELLOW,PINK,GREEN};
-   // while(spectrumCycle==false){
-    //while(true){
-      
          TurnOnColor(RED);
          TurnOffAll2();
          TurnOnColor(PURPLE);
@@ -152,12 +116,7 @@ void Breathing()
          TurnOffAll2();
          TurnOnColor(PINK);
          TurnOffAll2();
-
-
-          }
-
-void loop() {
-  
-
-
+   }
+ 
+  }
 }
