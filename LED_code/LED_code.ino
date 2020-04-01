@@ -1,16 +1,18 @@
 #define RED_LED 5
-#define BLUE_LED 4
+#define BLUE_LED 3
 #define GREEN_LED 6
 
-int BLUE[3]={0,0,255};
-int PINK[3]={255,0,255};//{255,192,203}
-int RED[3]={255,0,0};
-int YELLOW[3]={255,255,0};
-int GREEN[3]={0,255,0};//128
-int CYAN[3]={0,255,255};
-int ORANGE[3]={255,165,0};
-int MALACHITE[3]={11, 218, 81};
-int BRIGHT_PINK[3]={250,0,100};
+#define int BLUE[3]={0,0,255};
+#define int PINK[3]={255,0,255};//{255,192,203}
+#define int RED[3]={255,0,0};
+#define int YELLOW[3]={255,255,0};
+#define int GREEN[3]={0,255,0};//128
+#define int CYAN[3]={0,255,255};
+#define int ORANGE[3]={255,111,0};
+#define int MALACHITE[3]={11, 218, 81};
+#define int BRIGHT_PINK[3]={250,0,100};
+#define int PURPLE[3]={99, 57, 116};
+
 
 
 
@@ -88,17 +90,22 @@ void TurnOffAll2() {
 void TurnOnColor(int RGB[3]){  //FOR 1 STATIC COLOR
  // int gBright = 0;            //NEEDS FIXING,MAKE A FlAG WHILE LOOP
  // int rBright = 0;
- // int bBright = 0;
+  //int bBright = 0;
   
   //Fading into the selected color
   for(int i=0;i<RGB[0]+RGB[1]+RGB[2];i++){
+
     analogWrite(RED_LED,rBright);
     analogWrite(GREEN_LED,gBright);
     analogWrite(BLUE_LED, bBright);
     
-    if(rBright<RGB[0])rBright++;
-    if(gBright<RGB[1])gBright++;
-    if(bBright<RGB[2])bBright++;
+      if(rBright<RGB[0])rBright++;
+      delay(10);
+      if(gBright<RGB[1])gBright++;
+      delay(10);
+      if(bBright<RGB[2])bBright++;
+      delay(10);
+
     
     delay(fadeTime);
     }
@@ -153,30 +160,35 @@ void SpectrumCycling()
   }
 void Breathing()
   {
-    int COLORS[]={RED,BLUE,YELLOW,PINK,GREEN};
-    while(spectrumCycle==false){
+    //int COLORS[]={RED,BLUE,YELLOW,PINK,GREEN};
+   // while(spectrumCycle==false){
     //while(true){
       
-        // TurnOnColor(RED);
-        // TurnOffAll2();
-         //TurnOnColor(YELLOW);
-         //TurnOffAll2();
-         //TurnOnColor(GREEN);
-         //TurnOffAll2();
-        // TurnOnColor(BLUE);
-        // TurnOffAll2();
-        // TurnOnColor(PINK);
-         //TurnOffAll2();
+         TurnOnColor(RED);
+         TurnOffAll2();
+         TurnOnColor(PURPLE);
+         TurnOffAll2();
+         TurnOnColor(YELLOW);
+         TurnOffAll2();
+         TurnOnColor(GREEN);
+         TurnOffAll2();
+         TurnOnColor(ORANGE);
+         TurnOffAll2();
+         TurnOnColor(BLUE);
+         TurnOffAll2();
+         TurnOnColor(PINK);
+         TurnOffAll2();
 
-         for(int i=0;i<5;i++){
-          TurnOnColor(COLORS[i]);
-          TurnOffAll2();
+       //  for(int i=0;i<5;i++){
+        //  TurnOnColor(COLORS[i]);
+         // TurnOffAll2();
+          //delay(15);
           }
         
       
       
-    }
-  }
+//    }
+ // }
 
 void loop() {
   
