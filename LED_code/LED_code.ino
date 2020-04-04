@@ -34,7 +34,7 @@ int gBright = 0;
 int rBright = 0;
 int bBright = 0;
 
-bool spectrumCycle=false;//if false,then its breathing mode
+bool spectrumCycle=true;//if false,then its breathing mode
 
 int fadeTime = 10;
 int stayTime=20;
@@ -158,6 +158,6 @@ void Breathing()
 
 void loop() {
   
-
+SpectrumCycling();
 
 }

@@ -20,16 +20,17 @@ namespace App1.Views.MainPages
             
         }
 
-        void OnSliderValueChanged(object sender, ValueChangedEventArgs e)
+        void OnSliderValueChanged(object sender, ValueChangedEventArgs e)//needs to be made async
         {
             int value =(int)e.NewValue;
             rotatingLabel.Opacity = value * 0.0039;
             displayLabel.Text = String.Format($"Brightness Level is {value}");
             //value = (int)value;
-            if (value > 100)
+          /*  if (value > 100)
                 //bth.Message = value.ToString();
                 bth.Message = "1";
-            else bth.Message = "0";
+            else bth.Message = "0";*/
+
             bth.Send();
            // bth.Connect();
 

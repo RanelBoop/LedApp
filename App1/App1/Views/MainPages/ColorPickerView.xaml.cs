@@ -32,7 +32,8 @@ namespace App1.Views.MainPages
 
         private void Frame_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            bth.Message = colorViewModel.CategoryBackgroundColor;//sends the hex value
+            //bth.Message = colorViewModel.CategoryBackgroundColor;//sends the hex value
+
             //bth.Send() is sent when SELECT button is pressed.see in PopUpPages->ColorSelectionView
         }
 

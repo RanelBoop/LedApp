@@ -33,6 +33,9 @@ namespace App1.Views.MainPages
             // Perform an action after examining e.Value
             if (e.Value)
             {
+                _viewModel.Message = "SpectrumCycling";
+                _viewModel.Send();
+
                 ModeValue.Text = "Spectrum Cycling";
                 if (breathingImage.Opacity > 0)
                 {
@@ -41,21 +44,16 @@ namespace App1.Views.MainPages
                         breathingImage.Opacity-=0.1;
                         await Task.Delay(50);
                     }
-
-
                     while (spectrumImage.Opacity != 1)
                     {
                         spectrumImage.Opacity += .1;
                         await Task.Delay(50);
                     }
-
-                    
                 }
-              //  _viewModel.Message = "Spectrum Cycling";
-              //  _viewModel.Send();
             }
             else 
             {
+
                 ModeValue.Text = "Breathing";
                 while (spectrumImage.Opacity != 0) 
                 { 
@@ -67,6 +65,8 @@ namespace App1.Views.MainPages
                     breathingImage.Opacity+=.1;
                     await Task.Delay(50);
                 }
+                _viewModel.Message= "Breathing";
+                _viewModel.Send();
                // _viewModel.Message = "Breathing";
               //  _viewModel.Send();
             } 
