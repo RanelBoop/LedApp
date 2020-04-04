@@ -6,17 +6,21 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace App1.Views.MainPages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ColorPickerView : ContentView
     {
-        private ColorPickerViewModel viewModel;
-
+        private ColorPickerViewModel colorViewModel;
+        private Models.BthModel bth;
+        private Converters.StringToColorConverter colorConverter;
         public ColorPickerView()
         {
             InitializeComponent();
-            BindingContext = viewModel = new ColorPickerViewModel();
+            bth = new Models.BthModel();
+            colorConverter = new Converters.StringToColorConverter();
+            BindingContext = colorViewModel = new ColorPickerViewModel();
   
         }
 
@@ -26,11 +30,17 @@ namespace App1.Views.MainPages
             await Navigation.PushPopupAsync(new ColorSelectionPopupView());
         }
 
-      /*  void OnSliderValueChanged(object sender, ValueChangedEventArgs e)
+        private void Frame_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            double value = e.NewValue;
-            rotatingLabel.Opacity = value*0.01;
-            displayLabel.Text = String.Format($"Brightness Level is{value}");
-        }*/
+            bth.Message = colorViewModel.CategoryBackgroundColor;//sends the hex value
+            //bth.Send() is sent when SELECT button is pressed.see in PopUpPages->ColorSelectionView
+        }
+
+        /*  void OnSliderValueChanged(object sender, ValueChangedEventArgs e)
+          {
+              double value = e.NewValue;
+              rotatingLabel.Opacity = value*0.01;
+              displayLabel.Text = String.Format($"Brightness Level is{value}");
+          }*/
     }
 }

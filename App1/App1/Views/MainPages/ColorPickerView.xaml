@@ -36,6 +36,7 @@
             <!--  SELECTED COLOR  -->
             <Frame
                 BackgroundColor="{Binding CategoryBackgroundColor, Converter={StaticResource StringToColorConverter}}"
+                PropertyChanged="Frame_PropertyChanged"
                 CornerRadius="25"
                 HeightRequest="10"
                 WidthRequest="10"

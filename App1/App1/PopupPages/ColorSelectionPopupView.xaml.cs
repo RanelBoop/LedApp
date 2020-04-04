@@ -19,7 +19,7 @@ namespace App1.PopupPages
     public partial class ColorSelectionPopupView : PopupPage
     {
         ColorSelectionPopupViewModel ViewModel;
-
+        private Models.BthModel bth;
         public ColorSelectionPopupView()
         {
             InitializeComponent();
@@ -38,6 +38,8 @@ namespace App1.PopupPages
             //close this
             //await PopupNavigation.PopAsync(true);
             await PopupNavigation.PopAsync(true);
+            bth.Send();
+            
  
 
         }
