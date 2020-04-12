@@ -10,14 +10,14 @@
   <uses-permission android:name="android.permission.BLUETOOTH" />
   <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
   <uses-feature android:name="android.hardware.bluetooth" />
-  <application android:label="App1.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true">
+  <application android:label="LedApp" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true">
     <receiver android:name="com.companyname.app1.Bluetooth.BluetoothReceiver" android:exported="true">
       <intent-filter>
         <action android:name="android.bluetooth.device.action.BOND_STATE_CHANGED" />
         <action android:name="android.bluetooth.device.action.ACTION_FOUND" />
       </intent-filter>
     </receiver>
-    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="App1" android:theme="@style/MainTheme" android:name="crc64ad68f59cd763e462.MainActivity" />
+    <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="LedApp" android:theme="@style/MainTheme" android:name="crc64ad68f59cd763e462.MainActivity" />
     <activity android:noHistory="true" android:theme="@style/MyTheme.Splash" android:name="crc64ad68f59cd763e462.SplashActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

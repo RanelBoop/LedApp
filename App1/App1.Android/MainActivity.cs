@@ -15,7 +15,7 @@ using Rg.Plugins.Popup;
 
 namespace App1.Droid
 {
-    [Activity(Label = "App1", Icon = "@mipmap/icon", Theme = "@style/MainTheme",  ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]//removed MainLauncher = true,
+    [Activity(Label = "LedApp", Icon = "@mipmap/icon", Theme = "@style/MainTheme",  ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]//removed MainLauncher = true,
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         Bluetooth.BluetoothReceiver receiver;

@@ -3,15 +3,18 @@
 char data = 0; //Variable for storing received data
 LedApp ledApp(5,3,6);//r,b,g
 String readstring;
+int RSL_pin=13;
 
 void setup() {
   // put your setup code here, to run once:
     Serial.begin(9600); //Sets the baud for serial data transmission
-    readstring="";                               
+    readstring="";
+    pinMode(RSL_pin, OUTPUT);                               
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+  digitalWrite(RSL_pin, HIGH);
   
 //ledApp.Breathing();
 while(Serial.available())  // Send data only when you receive data:

@@ -33,7 +33,7 @@ namespace App1.Views.MainPages
             // Perform an action after examining e.Value
             if (e.Value)
             {
-                _viewModel.Message = "SpectrumCycling";
+                _viewModel.Message = " SpectrumCycling";
                 _viewModel.Send();
 
                 ModeValue.Text = "Spectrum Cycling";
@@ -65,11 +65,23 @@ namespace App1.Views.MainPages
                     breathingImage.Opacity+=.1;
                     await Task.Delay(50);
                 }
-                _viewModel.Message= "Breathing";
+                _viewModel.Message= " Breathing";
                 _viewModel.Send();
                // _viewModel.Message = "Breathing";
               //  _viewModel.Send();
             } 
+        }
+
+        private void breathingImage_Clicked(object sender, EventArgs e)
+        {
+            _viewModel.Message = " Breathing";
+            _viewModel.Send();
+        }
+
+        private void spectrumImage_Clicked(object sender, EventArgs e)
+        {
+            _viewModel.Message = " SpectrumCycling";
+            _viewModel.Send();
         }
     }
 }

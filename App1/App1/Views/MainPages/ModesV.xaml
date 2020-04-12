@@ -18,8 +18,8 @@
                  HorizontalOptions="Center"
                  VerticalOptions="CenterAndExpand"
                  TextColor="White"/>
-            <Image Source="spectrum_cycling" HeightRequest="150" WidthRequest=" 150" Opacity="1" x:Name="spectrumImage"/>
-            <Image Source="breathing" HeightRequest="150" WidthRequest=" 150" Opacity="0" x:Name="breathingImage"/>
+            <ImageButton Source="spectrum_cycling" HeightRequest="150" WidthRequest=" 150" Opacity="1" x:Name="spectrumImage" Clicked="spectrumImage_Clicked" BackgroundColor="Transparent"/>
+            <ImageButton Source="breathing" HeightRequest="150" WidthRequest=" 150" Opacity="0" x:Name="breathingImage" Clicked="breathingImage_Clicked" BackgroundColor="Transparent"/>
             <Frame Style="{StaticResource FrameStylePurple}" Margin="0,40">
                 <Switch IsToggled="True"
                         Toggled="OnToggled"
